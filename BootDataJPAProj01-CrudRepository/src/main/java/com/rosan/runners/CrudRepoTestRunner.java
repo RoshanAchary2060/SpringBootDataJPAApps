@@ -30,10 +30,12 @@ public class CrudRepoTestRunner implements CommandLineRunner {
 //		}
 		try {
 //			// Bulk Insertion/Batch Insertion
-//			Iterable<CoronaVaccine> listVaccines = service
-//					.registerInBatch(List.of(new CoronaVaccine(null, "shield", "IndiaTechnology", "China", 600.0, 3),
-//							new CoronaVaccine(null, "covishield", "IndiaTechnology", "Russia", 600.0, 3),
-//							new CoronaVaccine(null, "coronagogo", "NepTech", "Nepal", 200.0, 51)));
+			Iterable<CoronaVaccine> listVaccines = service
+					.registerInBatch(List.of(new CoronaVaccine(null, "shield", "IndiaTechnology", "China", 600.0, 3),
+							new CoronaVaccine(null, "covishield", "IndiaTechnology", "Russia", 600.0, 3),
+							new CoronaVaccine(null, "coronagogo", "NepTech", "Nepal", 200.0, 51),
+							new CoronaVaccine(null, "coronagogo", "IndiaTech", "India", 200.0, 7),
+							new CoronaVaccine(null, "coronagogo", "USATech", "USA", 280.0, 1)));
 
 //			Iterable<CoronaVaccine> listVaccines = service.registerInBatch(
 //					Arrays.asList(new CoronaVaccine(null, "shield", "IndiaTechnology", "China", 600.0, 3),
@@ -96,7 +98,7 @@ public class CrudRepoTestRunner implements CommandLineRunner {
 
 //			System.out.println(service.removeVaccinesByIds(List.of(453l)));
 
-			System.out.println(service.removeAllVaccines());
+//			System.out.println(service.removeAllVaccines());
 
 			
 		} catch (DataAccessException dae) {
