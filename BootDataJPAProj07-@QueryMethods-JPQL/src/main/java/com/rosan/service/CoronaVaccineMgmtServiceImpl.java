@@ -1,9 +1,12 @@
 package com.rosan.service;
 
+import java.util.Date;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import com.rosan.entity.CoronaVaccine;
 import com.rosan.repo.ICoronaVaccineRepo;
@@ -37,6 +40,62 @@ public class CoronaVaccineMgmtServiceImpl implements ICoronaVaccineMgmtService {
 	@Override
 	public List<String> searchVaccineNamesByPriceRange(double min, double max) {
 		return coronaRepo.searchVaccineNamesByPriceRange(min, max);
+	}
+
+	@Override
+	public Optional<CoronaVaccine> searchVaccineByName(String name) {
+		return coronaRepo.searchVaccineByName(name);
+	}
+
+	@Override
+	public Object searchVaccineDataByName(String name) {
+		return coronaRepo.searchVaccineDataByName(name);
+	}
+
+	@Override
+	public String searchVaccineCountryByName(String name) {
+		return coronaRepo.searchVaccineCountryByName(name);
+	}
+
+	@Override
+	public long getVaccinesCount() {
+		return coronaRepo.getVaccinesCount();
+	}
+
+	@Override
+	public Object getVaccinesAggregateDataByPriceRange(double min, double max) {
+		return coronaRepo.getVaccinesAggregateDataByPriceRange(min, max);
+	}
+
+	@Override
+	@Transactional
+	public int updateVaccinePriceByCountry(double newPrice, String country) {
+		return coronaRepo.updateVaccinePriceByCountry(newPrice, country);
+	}
+
+	@Override
+	public int deleteVaccinesByPriceRange(double start, double end) {
+		return coronaRepo.deleteVaccinesByPriceRange(start, end);
+	}
+
+	@Override
+	public int insertVaccine(long regNo, String company, String country, String name, double price, int dosesCount) {
+		return coronaRepo.insertVaccine(regNo, company, country, name, price, dosesCount);
+	}
+
+	@Override
+	public int insertVaccine(String company, String country, String name, double price, int dosesCount) {
+		return coronaRepo.insertVaccine(company, country, name, price, dosesCount);
+	}
+
+	@Override
+	public Date getSystemDate() {
+		return coronaRepo.getSystemDate();
+	}
+
+	@Override
+	public int createTempTable() {
+		return coronaRepo.createTempTable();
 	}
 
 }
