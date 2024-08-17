@@ -24,12 +24,12 @@ public class AssociationTestRunner implements CommandLineRunner {
 			// ======= Save Operation Parent to Child =======
 			// Prepare parent obj having associated child objs
 			// parent obj
-//			PhoneNumber ph1 = new PhoneNumber( 9999999999l, "ntc", "office");
-//			PhoneNumber ph2 = new PhoneNumber( 8888888888l, "ncell", "home");
+//			PhoneNumber ph1 = new PhoneNumber( 98888999999l, "nepalT", "home");
+//			PhoneNumber ph2 = new PhoneNumber( 88888666668l, "ncell", "hotel");
 //			Set<PhoneNumber> phonesSet = new HashSet<PhoneNumber>();
 //			phonesSet.add(ph1);
 //			phonesSet.add(ph2); // parent obj
-//			Person person1 = new Person("Raja", "hyd");
+//			Person person1 = new Person("Prakas", "ktm");
 //			person1.setContactDetails(phonesSet);
 			// parent to child
 //			ph1.setPerson(person1);
@@ -38,8 +38,8 @@ public class AssociationTestRunner implements CommandLineRunner {
 
 			/* ====== Save Operation child to parent ======== */
 			// child objs
-//			PhoneNumber ph1 = new PhoneNumber(77777777l, "cdma", "work");
-//			PhoneNumber ph2 = new PhoneNumber(66666666l, "smart", "visit");
+//			PhoneNumber ph1 = new PhoneNumber(777877l, "cdma", "work");
+//			PhoneNumber ph2 = new PhoneNumber(66666l, "smart", "visit");
 //			Set<PhoneNumber> phonesSet = Set.of(ph1, ph2);
 //			// parent obj
 //			Person per = new Person("ram", "nepal");
@@ -47,7 +47,6 @@ public class AssociationTestRunner implements CommandLineRunner {
 //			// add parent to childs
 //			ph1.setPerson(per);
 //			ph2.setPerson(per);
-//
 //			System.out.println(service.savePhoneNumbres(phonesSet));
 
 			// ====== load operation parent to child
@@ -68,7 +67,7 @@ public class AssociationTestRunner implements CommandLineRunner {
 
 //			System.out.println(service.deleteByPerson(5));
 
-			System.out.println(service.deleteAllPhoneNumbersOfAPerson(9));
+//			System.out.println(service.deleteAllPhoneNumbersOfAPerson(9));
 		} catch (DataAccessException ex) {
 			ex.printStackTrace();
 		}
